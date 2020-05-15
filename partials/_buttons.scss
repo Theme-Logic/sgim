@@ -1,0 +1,93 @@
+.button {
+    padding: 12px 24px;
+    border-radius: 48px;
+    display: inline-flex;
+    border: 1px solid;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    text-align: left;
+    outline: 0;
+    font-weight: normal;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    &.arrow {
+        padding: 12px 64px 12px 36px;
+
+        &:after {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 300;
+            content: "\f061";
+            right: 24px;
+            position: absolute;
+
+            @media (max-width:767px) {
+                font-weight: 400;
+                font-size: 10px;
+            }
+        }
+
+        &.fat {
+            padding: 28px 140px 28px 28px;
+
+            @media (max-width:767px) {
+                padding: 18px 82px 18px 28px;
+            }
+        }
+
+    }
+
+    &.short {
+        padding: 24px 48px 24px 28px;
+        min-width: 148px;
+    }
+
+    &.fat {
+        padding: 28px;
+    }
+
+    &.black {
+        border-color: black;
+        color: white;
+        background: black;
+
+        &:after {
+            color: white;
+        }
+    }
+
+    &.main {
+        border-color: $main;
+        color: white;
+        background: $main;
+
+        &:after {
+            color: white;
+        }
+    }
+
+    &.white {
+        border-color: $gray;
+        color: black;
+        background: white;
+
+        &:after {
+            color: black;
+        }
+    }
+
+    &.gray {
+        border-color: $gray;
+        color: $main;
+        background: #f9f9f9;
+
+        &:after {
+            color: $gray;
+            content: "\f054";
+        }
+    }
+}

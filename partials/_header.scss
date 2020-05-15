@@ -1,0 +1,182 @@
+#MPOuterHeader {
+    @extend .rw;
+    max-width: 100%;
+    background: white;
+    margin: 0 auto;
+    z-index: 20;
+    border-bottom: 15px solid $main;
+
+    @media (max-width:1024px) {
+        padding: 8px 0;
+        margin: 0;
+        max-width: 100%;
+
+        &.active {
+            background: $main;
+
+            img {
+                filter: brightness(100);
+            }
+
+            #MPheader {
+                &>.row:not([id]) {}
+            }
+        }
+    }
+
+
+    &>.col-md-12 {
+        padding: 0;
+    }
+
+    #auxskiplinkholder {
+        display: none;
+    }
+
+    #HEADER {
+        margin: 0;
+    }
+
+    #MPheader {
+        @extend .rw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%;
+
+        &>.row:not([id]) {
+            flex: 0 0 100%;
+            padding: 0;
+
+            .col-md-12 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0;
+                flex-flow: row-reverse;
+
+                .pull-right:last-child {
+                    // width: 100%;
+                }
+            }
+        }
+    }
+
+    #Logo {
+        margin-top: 0;
+        width: auto;
+        flex: 0 0 100%;
+        padding: 0;
+
+        .col-md-12 {
+            padding: 0;
+            font-size: 0;
+        }
+
+        #DesktopLogoDiv {
+            margin: 0 auto;
+            display: block;
+        }
+
+
+        img {
+            margin: 16px auto;
+            width: 380px;
+            display: block;
+
+            @media(max-width:420px) {
+                margin: 0 auto;
+                width: 290px;
+                display: block;
+            }
+        }
+    }
+
+    #MPAuxNav {
+        width: 100%;
+
+        #AuxMenu {
+            width: 100%;
+
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            justify-content: space-between;
+
+            li {
+                a {
+                    //margin: 0 0 0 52px;
+                    padding: 0;
+                    color: black;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.71;
+                    letter-spacing: normal;
+                    text-decoration: none;
+                    transition: .2s all ease;
+                    border: 0;
+                    margin: 0;
+                    padding: 10px;
+
+                    @media (max-width:767px) {
+                        padding: 0 3px;
+                    }
+
+
+                    &.highlighted {
+                        color: $main;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    #NAV {
+        .col-md-12 {
+            padding: 0;
+        }
+
+        #MPButtonBar {
+            nav.navbar.navbar-default {
+                border: 0;
+                background: 0;
+
+                @media (min-width:1024px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                a {
+                    transition: .2s all ease;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: #0073a2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #0073a2 !important;
+    background-color: #fff;
+}

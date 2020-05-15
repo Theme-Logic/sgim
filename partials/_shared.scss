@@ -1,0 +1,17 @@
+#MPOuter {
+    padding: 32px;
+    max-width: 100%;
+    overflow-x: initial;
+    min-height: calc(100vh - 400px);
+
+    @media (max-width:767px) {
+        padding: 32px 16px;
+        overflow-x: hidden;
+    }
+
+    .row-wide {
+        &>.col-md-12 {
+            padding: 0;
+        }
+    }
+}

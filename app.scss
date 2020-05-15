@@ -1,0 +1,116 @@
+@import "partials/_vars.scss";
+//@import "partials/_owl.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: $font;
+    @import "partials/_reset.scss";
+    //@import "partials/_buttons.scss";
+    overflow-x: hidden;
+    max-width: 100vw;
+
+    &.home {
+        @import "partials/_home.scss";
+    }
+
+    &.bodyBackground {
+        //   background: $main;
+    }
+
+    &.interior {
+        @import "partials/_interior.scss";
+    }
+
+    @import "partials/_header.scss";
+    @import "partials/_footer.scss";
+    @import "partials/_shared.scss";
+}
+
+#MPOuterMost.wide {
+    width: 100%;
+    max-width: 100%;
+    background: #f9f9f9;
+
+    .row-wide {
+        @extend .rw;
+    }
+}
+
+.paywall {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    &__button {
+        display: inline-block;
+        padding: 12px 36px;
+        color: white;
+        background: $main;
+        border-radius: 3px;
+        margin: 16px 3px 0;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        transition: .2s all ease;
+        border: 1px solid $main;
+        &:last-child {
+            background: white;
+            color: $main;
+
+        }
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+            background: darken($main, 10);
+        }
+    }
+
+    &__content {
+        background: #fafafa;
+        border-radius: 2px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.26);
+        padding: 20px;
+        text-align: center;
+        width: 600px;
+        max-width: 100%;
+
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 8px 0 16px 0;
+            font-size: 26px;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

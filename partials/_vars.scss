@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Adamina|Titillium+Web:300,400,400i,600,600i,700&display=swap');
+$main: #0073a2;
+$font: 'Titillium Web',
+sans-serif;
+
+.rw {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+h1 {
+    font-weight: 700;
+
+    font-family: 'Adamina', serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Adamina', serif;
+}
