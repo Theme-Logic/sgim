@@ -30,6 +30,9 @@ var SGIM = {
   initPaywall: function() {
     var articlesRead = SGIM.getCookie("sgim-reads"),
       times = 0;
+	  
+	console.log(articlesRead);
+	
     times = articlesRead.length > 0 ? parseInt(articlesRead) : 0;
     if (times > 2) {
       SGIM.injectPaywall();
